@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "com.ufu.blabla"
+        versionCode="10" 
+        version   = "1.0.0">
+
+    <!-- versionCode is optional and Android only -->
+
+    <name>BlaBla-UFU</name>
+
+    <description>
+      Aplicativo RU da Universidade Federal de Uberlândia
+    </description>
+
+    <author href="https://facebook.com/adilmarcoelho" email="adilmarcoelho@hotmail.com">
+        Adilmar Coelho Dantas
+    </author>
+	
+	
+	
+	 <!-- Define app icon for each platform. -->
+    <icon src="icon.png" />
+    <icon src="icon.png"   gap:platform="android"    gap:density="ldpi" />
+    <icon src="icon.png"   gap:platform="android"    gap:density="mdpi" />
+    <icon src="icon.png"  gap:platform="android"    gap:density="hdpi" />
+    <icon src="icon.png"  gap:platform="android"    gap:density="xhdpi" />
+    
+	
+
+</widget>
