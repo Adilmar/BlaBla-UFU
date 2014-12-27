@@ -1,62 +1,188 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
+<!doctype html>
+<html lang="us">
+<head>
+	<meta charset="utf-8">
+	<link href="jquery-ui.css" rel="stylesheet">
+	<style>
+	body{
+	font: 62.5% "Trebuchet MS", sans-serif;
+	margin: 50px;
+	background-image: url(images/back.png);
+	background-repeat: repeat;
+	background-color: #999;
+	}
+	.demoHeaders {
+		margin-top: 2em;
+	}
+	#dialog-link {
+		padding: .4em 1em .4em 20px;
+		text-decoration: none;
+		position: relative;
+	}
+	#dialog-link span.ui-icon {
+		margin: 0 5px 0 0;
+		position: absolute;
+		left: .2em;
+		top: 50%;
+		margin-top: -8px;
+	}
+	#icons {
+		margin: 0;
+		padding: 0;
+	}
+	#icons li {
+		margin: 2px;
+		position: relative;
+		padding: 4px 0;
+		cursor: pointer;
+		float: left;
+		list-style: none;
+	}
+	#icons span.ui-icon {
+		float: left;
+		margin: 0 4px;
+	}
+	.fakewindowcontain .ui-widget-overlay {
+		position: absolute;
+	}
+	select {
+		width: 200px;
+	}
+	</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="refresh" content="5;url=sexo.html">
+</head>
+<body>
 
-    <!-- jQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-    <!-- Firebase -->
-    <script src="https://cdn.firebase.com/js/client/2.0.2/firebase.js"></script>
 
-    <!-- Firechat -->
-    <link rel="stylesheet" href="https://cdn.firebase.com/libs/firechat/2.0.1/firechat.min.css" />
-    <script src="firechat.min.js"></script>
+<!-- Progressbar -->
+<h2 class="demoHeaders">&nbsp;</h2>
+<h2 class="demoHeaders">&nbsp;</h2>
+<h2 class="demoHeaders">&nbsp;</h2>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h2 class="demoHeaders" align="center"><img src="images/blabla.png" width="205" height="98"></h2>
+<div id="progressbar"></div>
 
-    <!-- Custom CSS -->
-    <style>
-      #firechat-wrapper {
-        height: 475px;
-        max-width: 325px;
-        padding: 10px;
-        border: 1px solid #ccc;
-        background-color: #fff;
-        margin: 50px auto;
-        text-align: center;
-        -webkit-border-radius: 4px;
-        -moz-border-radius: 4px;
-        border-radius: 4px;
-        -webkit-box-shadow: 0 5px 25px #666;
-        -moz-box-shadow: 0 5px 25px #666;
-        box-shadow: 0 5px 25px #666;
-      }
-    </style>
-  </head>
 
-  
-  <body>
-<p align="center"><img src="images/blabla.png" width="219" height="86"></p>
-<table width="240" border="0" align="center">
-  <tr>
-    <td width="47" height="50"><a href="politica.html"><img src="images/key.png" width="61" height="53"></a></td>
-    <td><em>Política de uso</em> e privacidade.</td>
-  </tr>
-</table>
-<div id="firechat-wrapper"></div>
-    <script type="text/javascript">
-      var chatRef = new Firebase("https://chatufu.firebaseio.com/");
-      var chat = new FirechatUI(chatRef, document.getElementById("firechat-wrapper"));
-      chatRef.onAuth(function(authData) {
-        if (authData) {
-          chat.setUser(authData.uid, "ID-KEY" + authData.uid.substr(10, 8));
-        } else {
-          chatRef.authAnonymously(function(error, authData) {
-            if (error) {
-              console.log(error);
-            }
-          });
-        }
-      });
-    </script>
-  </body>
+<script src="external/jquery/jquery.js"></script>
+<script src="jquery-ui.js"></script>
+<script>
+
+$( "#accordion" ).accordion();
+
+
+
+var availableTags = [
+	"ActionScript",
+	"AppleScript",
+	"Asp",
+	"BASIC",
+	"C",
+	"C++",
+	"Clojure",
+	"COBOL",
+	"ColdFusion",
+	"Erlang",
+	"Fortran",
+	"Groovy",
+	"Haskell",
+	"Java",
+	"JavaScript",
+	"Lisp",
+	"Perl",
+	"PHP",
+	"Python",
+	"Ruby",
+	"Scala",
+	"Scheme"
+];
+$( "#autocomplete" ).autocomplete({
+	source: availableTags
+});
+
+
+
+$( "#button" ).button();
+$( "#radioset" ).buttonset();
+
+
+
+$( "#tabs" ).tabs();
+
+
+
+$( "#dialog" ).dialog({
+	autoOpen: false,
+	width: 400,
+	buttons: [
+		{
+			text: "Ok",
+			click: function() {
+				$( this ).dialog( "close" );
+			}
+		},
+		{
+			text: "Cancel",
+			click: function() {
+				$( this ).dialog( "close" );
+			}
+		}
+	]
+});
+
+// Link to open the dialog
+$( "#dialog-link" ).click(function( event ) {
+	$( "#dialog" ).dialog( "open" );
+	event.preventDefault();
+});
+
+
+
+$( "#datepicker" ).datepicker({
+	inline: true
+});
+
+
+
+$( "#slider" ).slider({
+	range: true,
+	values: [ 17, 67 ]
+});
+
+
+
+$( "#progressbar" ).progressbar({
+value: false
+});
+
+
+
+$( "#spinner" ).spinner();
+
+
+
+$( "#menu" ).menu();
+
+
+
+$( "#tooltip" ).tooltip();
+
+
+
+$( "#selectmenu" ).selectmenu();
+
+
+// Hover states on the static widgets
+$( "#dialog-link, #icons li" ).hover(
+	function() {
+		$( this ).addClass( "ui-state-hover" );
+	},
+	function() {
+		$( this ).removeClass( "ui-state-hover" );
+	}
+);
+</script>
+</body>
 </html>
