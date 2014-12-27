@@ -1,4 +1,4 @@
 BlaBla-UFU
 ==========
 
-Aplicativo BlaBla
+Aplicativo BlaBla, uma nova febre virtual!

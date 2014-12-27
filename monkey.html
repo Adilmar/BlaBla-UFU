@@ -16,6 +16,7 @@
     <!-- Custom CSS -->
     <style>
       #firechat-wrapper {
+<<<<<<< HEAD
 	height: 475px;
 	max-width: 325px;
 	padding: 10px;
@@ -37,10 +38,29 @@
 	background-image: url(images/back.png);
 	background-repeat: repeat;
 	background-color: #906;
+=======
+        height: 475px;
+        max-width: 325px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        margin: 50px auto;
+        text-align: center;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        -webkit-box-shadow: 0 5px 25px #666;
+        -moz-box-shadow: 0 5px 25px #666;
+        box-shadow: 0 5px 25px #666;
+      }
+    body {
+	background-image: url(images/back.png);
+>>>>>>> origin/master
 }
     </style>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   </head>
+<<<<<<< HEAD
   <body>
 <table width="341" border="0" align="center" cellpadding="0" cellspacing="0">
   <tr>
@@ -54,6 +74,20 @@
 </p>
    
   <script type="text/javascript">
+=======
+
+  
+  <body>
+<p align="center"><img src="images/blabla.png" width="219" height="86"></p>
+<table width="240" border="0" align="center">
+  <tr>
+    <td width="47" height="50"><a href="politica.html"><img src="images/key.png" width="61" height="53"></a></td>
+    <td><em>Política de uso</em> e privacidade(em breve)</td>
+  </tr>
+</table>
+<div id="firechat-wrapper"></div>
+    <script type="text/javascript">
+>>>>>>> origin/master
       var chatRef = new Firebase("https://chatufu.firebaseio.com/");
       var chat = new FirechatUI(chatRef, document.getElementById("firechat-wrapper"));
       chatRef.onAuth(function(authData) {
@@ -67,6 +101,10 @@
           });
         }
       });
+<<<<<<< HEAD
       </script>
+=======
+    </script>
+>>>>>>> origin/master
   </body>
 </html>
