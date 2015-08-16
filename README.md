@@ -1,4 +1,0 @@
-BlaBla-UFU
-==========
-
-Aplicativo BlaBla
