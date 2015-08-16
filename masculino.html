@@ -54,7 +54,7 @@
 </p>
    
   <script type="text/javascript">
-      var chatRef = new Firebase("https://chatufu3.firebaseio.com/");
+      var chatRef = new Firebase("https://chatufu.firebaseio.com/");
       var chat = new FirechatUI(chatRef, document.getElementById("firechat-wrapper"));
       chatRef.onAuth(function(authData) {
         if (authData) {
