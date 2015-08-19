@@ -35,7 +35,7 @@
    </style>
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>BlaBla Chat X</title>
+	<title>BlaBla Chat</title>
 	<link rel="stylesheet" href="themes/blabla.min.css" />
 	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
 	<link rel="stylesheet" href="js/blabla.css" />
@@ -54,11 +54,11 @@
 </p>
    
   <script type="text/javascript">
-      var chatRef = new Firebase("https://chatufu3.firebaseio.com/");
+      var chatRef = new Firebase("https://chatufu.firebaseio.com/");
       var chat = new FirechatUI(chatRef, document.getElementById("firechat-wrapper"));
       chatRef.onAuth(function(authData) {
         if (authData) {
-          chat.setUser(authData.uid, "👻" + authData.uid.substr(10, 8));
+          chat.setUser(authData.uid, "🐰-M" + authData.uid.substr(10, 8));
         } else {
           chatRef.authAnonymously(function(error, authData) {
             if (error) {
